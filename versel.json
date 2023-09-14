@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "main.py",
+        "use": "@now/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/create-student",
+        "methods": ["POST"],
+        "dest": "main.py"
+      },
+      {
+        "src": "/",
+        "dest": "main.py"
+      }
+    ]
+  }
+  
