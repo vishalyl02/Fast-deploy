@@ -1,9 +1,11 @@
- from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
+from typing import Optional
 from pydantic import BaseModel
 from peewee import Model, CharField, IntegerField, PostgresqlDatabase
 from playhouse.db_url import connect
 from pydantic import ValidationError
+
 # Define the ElephantSQL PostgreSQL database connection
 DATABASE_URL = "postgres://sfwocxbz:9-egT1nKDFM_O7EzLc6bI-l-Hoso87MQ@snuffleupagus.db.elephantsql.com/sfwocxbz"
 
