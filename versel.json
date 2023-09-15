@@ -1,21 +1,28 @@
 {
-    "version": 2,
-    "builds": [
+  "version": 2,
+  "builds": [
       {
-        "src": "main.py",
-        "use": "@now/python"
+          "src": "main.py",
+          "use": "@now/python"
       }
-    ],
-    "routes": [
+  ],
+  "routes": [
       {
-        "src": "/create-student",
-        "methods": ["POST"],
-        "dest": "main.py"
+          "src": "/create-student",
+          "methods": ["POST"],
+          "dest": "main.py"
       },
       {
-        "src": "/",
-        "dest": "main.py"
+          "src": "/(.*)",
+          "dest": "main.py"
       }
-    ]
+  ],
+  "functions": {
+      "api": {
+          "memory": 512,
+          "maxDuration": 10,
+          "runtime": "python3.9",
+          "includeFiles": ["main.py"]
+      }
   }
-  
+}
