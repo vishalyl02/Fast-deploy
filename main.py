@@ -13,7 +13,7 @@ DATABASE_URL = "postgres://sfwocxbz:9-egT1nKDFM_O7EzLc6bI-l-Hoso87MQ@snuffleupag
 app = FastAPI()
 
 # CORS Configuration
-origins = ["https://next-frontend-umber.vercel.app"]  # Remove the trailing slash
+origins = ["https://next-frontend-umber.vercel.app/"]  # Remove the trailing slash
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
