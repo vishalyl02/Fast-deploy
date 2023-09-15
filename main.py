@@ -14,7 +14,7 @@ DATABASE_URL = "postgres://sfwocxbz:9-egT1nKDFM_O7EzLc6bI-l-Hoso87MQ@snuffleupag
 app = FastAPI()
 
 # CORS Configuration
-origins = ["http://localhost:3000"]  # Update with the actual URL of your frontend
+origins = ["https://next-frontend-umber.vercel.app/"]  # Update with the actual URL of your frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
